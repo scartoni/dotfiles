@@ -2,8 +2,8 @@
   <h1>🍧 Toni's Dotfiles</h1>
   <p>My personal Windows 11 configuration focused on productivity and Dark aesthetics (Catppuccin style).</p>
 
-  <img src="./assets/desktop.png" alt="Clean Desktop" width="48%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
-  <img src="./assets/desktop_komorebi.png" alt="Komorebi Tiling" width="48%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
+  <img src="assets/desktop.png" alt="Clean Desktop" width="48%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
+  <img src="assets/desktop_komorebi.png" alt="Komorebi Tiling" width="48%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
 
   <br /><br />
 
@@ -35,16 +35,3 @@ dotfiles/
 │   ├── yasb/         # Bar configuration and styles.css
 │   └── windhawk/     # Taskbar mods (JSON code)
 └── README.md
-🚀 How to use
-Clone the repository:
-
-Bash
-
-git clone [https://github.com/scartoni/dotfiles.git](https://github.com/scartoni/dotfiles.git)
-Komorebi: Copy komorebi.json to your user configuration folder (usually $Env:USERPROFILE).
-
-YASB: Point config.yaml and styles.css to your YASB executable directory.
-
-Windhawk: Open the .json files located in the windhawk folder, copy the code, and paste it into the "Advanced Settings" of each respective mod.
-
-<div align="center"> Made by <b>Toni</b> 🇯🇲 </div>

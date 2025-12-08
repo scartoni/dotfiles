@@ -56,5 +56,5 @@ Since Windhawk doesn't support importing files directly yet, you need to apply t
 
 ---
 <div align="center">
-  Made by <b>Toni</b> 🇯🇲
+  Made by <b>Scartoni</b> 🇧🇷
 </div>

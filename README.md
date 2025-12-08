@@ -25,8 +25,43 @@ Configuration files to transform the Windows 11 experience into a Tiling Window 
 | **Status Bar** | [YASB](https://github.com/amnweb/yasb) | Custom top bar with widgets and CSS styling. |
 | **Taskbar** | [Windhawk](https://windhawk.net/) | Mods to customize the native taskbar and system tray. |
 
-## 🚀 How to use
+## 📦 Requirements
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/scartoni/dotfiles.git](https://github.com/scartoni/dotfiles.git)
+Before installing, make sure you have the following tools installed:
+
+* [Git for Windows](https://git-scm.com/download/win)
+* [Komorebi](https://github.com/LGUG2Z/komorebi/releases) (Latest release)
+* [YASB](https://github.com/amnweb/yasb/releases) (Yet Another Status Bar)
+* [Windhawk](https://windhawk.net/) (The customization marketplace)
+* [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) (Required for icons to show up)
+
+## 🚀 Installation Guide
+
+### 1. Clone the Repository
+Open your terminal (PowerShell or CMD) and run:
+```bash
+git clone [https://github.com/scartoni/dotfiles.git](https://github.com/scartoni/dotfiles.git)
+cd dotfiles
+### 2. Configure Komorebi
+Move the configuration file to your user profile folder:
+* Copy `configs/komorebi/komorebi.json`
+* Paste it into `C:\Users\YOUR_USER\` (or just `$Env:USERPROFILE` in PowerShell).
+
+### 3. Configure YASB
+* Go to your **YASB installation folder** (usually inside `.yasb` in your user folder).
+* Replace the existing `config.yaml` and `styles.css` with the ones found in `configs/yasb/`.
+* Restart YASB.
+
+### 4. Setup Windhawk Mods
+Since Windhawk doesn't support importing files directly yet, you need to apply the mods manually:
+1.  Open **Windhawk**.
+2.  Search for the mod name (e.g., "Taskbar Styler").
+3.  Go to the **Advanced** tab of the mod.
+4.  Open the corresponding `.json` file from `configs/windhawk/` in Notepad.
+5.  Copy the code and paste it into the "Mod Settings" area.
+6.  Click **Save**.
+
+---
+<div align="center">
+  Made by <b>Toni</b> 🇯🇲
+</div>

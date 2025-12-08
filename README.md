@@ -62,6 +62,3 @@ Since Windhawk doesn't support importing files directly yet, you need to apply t
 6.  Click **Save**.
 
 ---
-<div align="center">
-  Made by <b>Toni</b> 🇯🇲
-</div>

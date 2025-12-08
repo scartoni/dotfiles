@@ -2,8 +2,9 @@
   <h1>🍧 Toni's Dotfiles</h1>
   <p>My personal Windows 11 configuration focused on productivity and Dark aesthetics (Catppuccin style).</p>
 
-  <img src="assets/desktop.png" alt="Clean Desktop" width="48%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
-  <img src="assets/desktop_komorebi.png" alt="Komorebi Tiling" width="48%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
+  <img src="assets/desktop.png" alt="Clean Desktop" width="100%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
+  <br /><br />
+  <img src="assets/desktop_komorebi.png" alt="Komorebi Tiling" width="100%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
 
   <br /><br />
 

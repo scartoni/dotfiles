@@ -33,6 +33,7 @@ Open your terminal (PowerShell or CMD) and run:
 ```bash
 git clone https://github.com/scartoni/dotfiles.git
 cd dotfiles
+```
 ### 2. Configure Komorebi
 Move the configuration file to your user profile folder:
 * Copy `configs/komorebi/komorebi.json`

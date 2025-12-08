@@ -7,10 +7,10 @@
 
   <br /><br />
 
-  <img src="https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows&logoColor=white" />
-  <img src="https://img.shields.io/badge/WM-Komorebi-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Bar-YASB-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Mods-Windhawk-purple?style=for-the-badge" />
+  <img src="[https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows&logoColor=white](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows&logoColor=white)" />
+  <img src="[https://img.shields.io/badge/WM-Komorebi-orange?style=for-the-badge](https://img.shields.io/badge/WM-Komorebi-orange?style=for-the-badge)" />
+  <img src="[https://img.shields.io/badge/Bar-YASB-blue?style=for-the-badge](https://img.shields.io/badge/Bar-YASB-blue?style=for-the-badge)" />
+  <img src="[https://img.shields.io/badge/Mods-Windhawk-purple?style=for-the-badge](https://img.shields.io/badge/Mods-Windhawk-purple?style=for-the-badge)" />
 </div>
 
 ---
@@ -25,22 +25,13 @@ Configuration files to transform the Windows 11 experience into a Tiling Window 
 | **Status Bar** | [YASB](https://github.com/amnweb/yasb) | Custom top bar with widgets and CSS styling. |
 | **Taskbar** | [Windhawk](https://windhawk.net/) | Mods to customize the native taskbar and system tray. |
 
-## 📦 Requirements
-
-Before installing, make sure you have the following tools installed:
-
-* [Git for Windows](https://git-scm.com/download/win)
-* [Komorebi](https://github.com/LGUG2Z/komorebi/releases) (Latest release)
-* [YASB](https://github.com/amnweb/yasb/releases) (Yet Another Status Bar)
-* [Windhawk](https://windhawk.net/) (The customization marketplace)
-* [JetBrains Mono Nerd Font](https://www.nerdfonts.com/font-downloads) (Required for icons to show up)
-
 ## 🚀 Installation Guide
 
 ### 1. Clone the Repository
 Open your terminal (PowerShell or CMD) and run:
+
 ```bash
-git clone [https://github.com/scartoni/dotfiles.git](https://github.com/scartoni/dotfiles.git)
+git clone https://github.com/scartoni/dotfiles.git
 cd dotfiles
 ### 2. Configure Komorebi
 Move the configuration file to your user profile folder:
@@ -62,3 +53,6 @@ Since Windhawk doesn't support importing files directly yet, you need to apply t
 6.  Click **Save**.
 
 ---
+<div align="center">
+  Made by <b>Toni</b> 🇯🇲
+</div>

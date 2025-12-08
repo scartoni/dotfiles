@@ -1,0 +1,372 @@
+* {
+    font-size: 12px;
+    color: #cdd6f4; /* Cor padrão */
+    font-weight: 500;
+    font-family: "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+}
+.widget {
+    background-color: #1e1e2e;
+    padding: 0 8px;
+    margin: 0;
+}
+.widget .label {
+    padding: 1px 2px 1px 2px;
+}
+.widget .label.alt {
+    padding: 1px 8px 1px 8px;
+}
+.active-window-widget {
+    border-radius: 18px;
+    margin-left: 8px
+}
+.container-left,
+.container-center,
+.container-right {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- ARREDONDAMENTOS --- */
+.clock-widget {
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+.apps-widget {
+    padding: 0 2px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.komorebi-active-layout {
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 0 4px 0 0;
+}
+.komorebi-active-layout .label {
+    font-weight: 600;
+    padding: 2px 0 0 0;
+}
+.wifi-widget, .systray { 
+    padding: 0 4px 0 4px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+/* --- FUNDOS DOS WIDGETS (Cápsulas) --- */
+/* .notes-widget removido daqui para ficar transparente na barra */
+.apps-widget .widget-container,
+.komorebi-workspaces .widget-container,
+.wifi-widget .widget-container,
+.komorebi-active-layout .widget-container,
+.systray .widget-container { 
+    background-color: #313244;
+    margin: 4px 0px 4px 0;
+    border-radius: 14px;
+}
+
+.apps-widget .widget-container {
+    margin-right: 2px;
+}
+
+/* --- OUTROS WIDGETS --- */
+.komorebi-workspaces .ws-btn {
+    font-size: 16px;
+    background-color: transparent;
+    margin: 0 4px 0 4px;
+    color: #95a0ad;
+    border: none;
+}
+.komorebi-workspaces .ws-btn.populated {
+    color: #fc7aa5;
+}
+.komorebi-workspaces .ws-btn:hover,
+.komorebi-workspaces .ws-btn.populated:hover,
+.komorebi-workspaces .ws-btn.active {
+    color: #98bbe9;
+    background-color: transparent;
+}
+.komorebi-workspaces .float-override {
+    color: #0eb986;
+    font-size: 14px;
+    padding: 0 0 0 8px;
+}
+.apps-widget .label {
+    font-size: 14px;
+    padding: 0 2px;
+    color: #cdd6f4;
+}
+.apps-widget .label:hover {
+    color: #fff;
+}
+
+/* --- POWER MENU --- */
+.uptime {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: "Segoe UI";
+}
+.power-menu-widget .label {
+    color: #f38ba8;
+    font-size: 13px;
+}
+.power-menu-popup {
+    background-color: rgba(24, 24, 37, 0.9);
+    border-radius: 12px;
+    border: 4px solid rgb(41, 42, 58);
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 240px;
+    height: 120px;
+    border-radius: 8px;
+    background-color: rgb(41, 42, 58);
+    font-family: "Segoe UI";
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 8px;
+}
+.power-menu-popup .button.hover {
+    background-color: rgb(55, 56, 75);
+    border: 1px solid rgb(55, 56, 75);
+}
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: "Segoe UI";
+}
+.power-menu-popup .button .icon {
+    font-size: 48px;
+    padding-top: 8px;
+    color: rgba(255, 255, 255, 0.25);
+}
+.power-menu-popup .button.cancel .icon {
+    color: rgba(243, 139, 168, 0.55);
+}
+.power-menu-popup .button.cancel .label {
+    color: rgba(243, 139, 168, 0.95);
+}
+.power-menu-popup .button.shutdown .icon {
+    color: rgba(137, 180, 250, 0.55);
+}
+.power-menu-popup .button.shutdown .label {
+    color: rgba(137, 180, 250, 0.95);
+}
+
+/* --- ICONES --- */
+.icon {
+    font-size: 16px;
+}
+.volume-widget .icon {
+    color: #89b4fa;
+    margin: 1px 2px 0 0;
+}
+.cpu-widget .icon,
+.memory-widget .icon {
+    font-size: 14px;
+    color: #cba6f7;
+    margin: 0 2px 1px 0;
+}
+.memory-widget .icon {
+    color: #a6c9f7;
+}
+.wifi-widget .icon {
+    color: #43d8d8;
+    padding: 0 7px;
+    margin: 0;
+}
+
+/* --- WEATHER --- */
+.weather-widget .icon {
+    font-size: 16px;
+    margin: 0 2px 1px 0;
+}
+.weather-widget .icon.sunnyDay {
+    color: rgb(221, 210, 107);
+}
+.weather-widget .icon.clearNight {
+    color: rgb(107, 189, 221);
+    font-size: 22px;
+    margin: 1px 2px 0px 0;
+}
+
+/* --- MEDIA --- */
+.media-widget {
+    padding: 0;
+    padding-left: 2px;
+    margin: 0;
+    border-radius: 16px;
+    margin-right: 8px;
+}
+.media-widget .label {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.media-widget .btn {
+    color: #acb2c9;
+    padding: 0 3px;
+    margin: 4px 0;
+    font-family: Segoe Fluent Icons;
+}
+.media-widget .btn:hover {
+    color: #89b4fa;
+}
+.media-widget .btn.play {
+    background-color: #313244;
+    border-radius: 14px;
+    font-size: 16px;
+}
+.media-widget .btn.disabled:hover,
+.media-widget .btn.disabled {
+    color: #4e525c;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* --- GITHUB --- */
+.github-widget {
+    padding:0 4px;
+}
+.github-widget .icon {
+    font-size: 14px;
+    color: #cdd6f4
+}
+.github-widget .icon.new-notification {
+    color: #f38ba8;
+}
+
+/* --- SYSTRAY --- */
+.systray {
+    padding: 0 4px;
+}
+.systray .unpinned-visibility-btn {
+    font-size: 14px;
+    color: #95a0ad;
+    background: transparent;
+    border: none;
+    padding: 0 2px;
+}
+.systray .unpinned-visibility-btn:hover {
+    color: #89b4fa;
+}
+.systray .button {
+    padding: 2px;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.systray .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- NOTES WIDGET (CORRIGIDO PARA O SEU TEMA) --- */
+.notes-widget {
+    padding: 0 4px;
+    /* Sem fundo para o botão na barra */
+}
+.notes-widget .label {
+   font-size: 14px;
+   color: #cdd6f4; /* Cor padrão */
+   padding-bottom: 2px;
+}
+.notes-widget .icon {
+    font-size: 16px;
+    color: #cdd6f4; /* Cor padrão */
+    padding-top: 2px;
+}
+
+/* Notes Widget Menu - Estilo igual ao Power Menu */
+.notes-menu {
+    min-width: 400px;
+    max-width: 400px;
+    background-color: rgba(24, 24, 37, 0.9); /* Igual Power Menu */
+    border: 4px solid rgb(41, 42, 58);       /* Igual Power Menu */
+    border-radius: 12px;
+    padding: 10px;
+}
+.notes-menu .note-item {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px;
+}
+.notes-menu .note-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+.notes-menu .note-item .icon {
+    font-size: 16px;
+    padding: 0 4px;
+    color: #cdd6f4; /* Ícone padrão */
+}
+.notes-menu .delete-button {
+    color: #f38ba8; /* Vermelho */
+    background: transparent;
+    border: none;
+    font-size: 8px;
+    padding: 7px 8px;
+    border-radius: 3px;
+}
+.notes-menu .delete-button:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+.notes-menu .note-item .title {
+    font-size: 13px;
+    font-family: "JetBrainsMono NFP"; /* Fonte do seu sistema */
+    color: #cdd6f4;
+}
+.notes-menu .note-item .date {
+    font-size: 12px;
+    font-family: "JetBrainsMono NFP";
+    color: #95a0ad;
+}
+.notes-menu .empty-list {
+    font-family: "JetBrainsMono NFP";
+    color: #95a0ad;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 10px 0 20px 0;     
+}
+.notes-menu .add-button,  
+.notes-menu .cancel-button {
+    padding: 8px;
+    background-color: rgb(41, 42, 58); /* Fundo botão sólido */
+    border: none;
+    border-radius: 8px;
+    color: #cdd6f4;
+    font-family: "JetBrainsMono NFP";
+    margin-top: 10px;
+}
+.notes-menu .cancel-button {
+    margin-left: 4px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.notes-menu .add-button:hover,
+.notes-menu .cancel-button:hover {
+    background-color: rgb(55, 56, 75);
+}
+.notes-menu .scroll-area {
+    background: transparent; 
+    border: none; 
+    border-radius: 0;
+}
+.notes-menu .note-input {
+    background-color: rgba(17, 17, 27, 0.5); /* Levemente escuro */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "JetBrainsMono NFP";
+    font-size: 14px;
+    max-height: 30px;
+    padding: 4px;
+    border-radius: 6px;
+    color: #cdd6f4;
+    margin-bottom: 5px;
+}
+.note-input:focus {
+    border: 1px solid #89b4fa;
+}

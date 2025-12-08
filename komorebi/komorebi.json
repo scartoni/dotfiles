@@ -1,0 +1,208 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.32/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "animation": {
+    "fps": 60,
+    "style": "EaseInOutExpo",
+    "duration": 250,
+    "enabled": false
+  },
+  "border": false,
+  "border_colours": {
+    "unfocused": "#ffffff",
+    "single": "#ffffff",
+    "monocle": "#ffffff",
+    "stack": "#ffffff"
+  },
+  "border_implementation": "Komorebi",
+  "border_offset": -1,
+  "border_style": "System",
+  "border_width": 0,
+  "cross_monitor_move_behaviour": "Insert",
+  "default_container_padding": 1,
+  "default_workspace_padding": 1,
+  "float_override": false,
+  "global_work_area_offset": {
+    "left": 0,
+    "right": 0,
+    "top": 0,
+    "bottom": 0
+  },
+  "mouse_follows_focus": false,
+  "stackbar": {
+    "tabs": {
+      "unfocused_text": "#ffffff",
+      "font_size": 0,
+      "background": "#ffffff",
+      "width": 300,
+      "font_family": "Segoe UI",
+      "focused_text": "#ffffff"
+    },
+    "height": 40,
+    "label": "Process",
+    "mode": "OnStack"
+  },
+  "transparency": true,
+  "transparency_alpha": 225,
+  "unmanaged_window_operation_behaviour": "Op",
+  "window_container_behaviour": "Create",
+  "window_hiding_behaviour": "Cloak",
+  "display_index_preferences": {
+    "0": "GSM0001-5&27eed4c6&0&UID4352",
+    "1": "GWD2160-5&27eed4c6&0&UID4356",
+    "2": "RTD0000-5&27eed4c6&0&UID4354"
+  },
+  "monitors": [
+    {
+      "window_based_work_area_offset_limit": 3,
+      "window_based_work_area_offset": {
+        "left": 400,
+        "top": 300,
+        "right": 900,
+        "bottom": 400
+      },
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "UltrawideVerticalStack"
+        },
+
+        {
+          "name": "II",
+          "initial_workspace_rules": [
+          { 
+            "kind" : "Class",
+            "id": "Premiere Pro"
+          },
+          {
+            "kind": "Title",
+            "matching_strategy": "Contains",
+            "id": "Adobe After Effects"
+          },
+          {
+            "kind": "Class",
+            "id": "Photoshop"
+          },
+          {
+            "kind": "Class",
+            "id": "Illustrator"
+          }
+          ]
+        },
+        {
+          "name": "III",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "IV",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "V",
+          "layout": "Rows"
+        },
+        {
+          "name": "VI",
+          "layout": "Grid"
+        },
+        {
+          "name": "VII",
+          "layout": "RightMainVerticalStack"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "Grid"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "Rows"
+        }
+      ]
+    }
+  ],
+  "ignore_rules": [
+    {
+      "kind": "Title",
+      "matching_strategy": "Contains",
+      "id": "Install"
+    },
+    {
+      "kind": "Title",
+      "matching_strategy": "Equals",
+      "id": "WHKD Keybinds"
+    },
+    {
+      "kind": "Class",
+      "matching_strategy": "Equals",
+      "id": "Qt663QWindowToolSaveBits"
+    },
+    {
+      "kind": "Title",
+      "matching_strategy": "Contains",
+      "id": "SceneTree"
+    },
+    {
+      "kind": "Title",
+      "matching_strategy": "Contains",
+      "id": "setup"
+    },
+    {
+      "kind": "Title",
+      "matching_strategy": "Contains",
+      "id": "VMware"
+    },
+    {
+      "kind": "Exe",
+      "matching_strategy": "Equals",
+      "id": "Photoshop.exe"
+    },
+    {
+      "kind": "Exe",
+      "matching_strategy": "Equals",
+      "id": "Writing Tools.exe"
+    },
+    {
+      "kind": "Exe",
+      "matching_strategy": "Equals",
+      "id": "ChatGPT.exe"
+    },
+    {
+      "kind": "Exe",
+      "matching_strategy": "Equals",
+      "id": "CopilotNative.exe"
+    },
+    {
+      "kind": "Exe",
+      "matching_strategy": "Contains",
+      "id": "PowerToys."
+    },
+    {
+      "kind": "Exe",
+      "matching_strategy": "Equals",
+      "id": "Bitwarden.exe"
+    }
+  ],
+  "floating_applications": [
+    {
+      "kind": "Class",
+      "id": "Premiere Pro"
+    },
+    {
+      "kind": "Title",
+      "matching_strategy": "Contains",
+      "id": "Adobe After Effects"
+    },
+    {
+      "kind": "Class",
+      "id": "Photoshop"
+    }
+  ]
+}

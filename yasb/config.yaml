@@ -1,0 +1,346 @@
+watch_stylesheet: true
+watch_config: true
+debug: false 
+
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic reload-configuration"
+
+bars:
+  status-bar:
+    enabled: true
+    screens: ['*'] 
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: false 
+      acrylic: false 
+      dark_mode: false
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 36
+    padding:
+      top: 4
+      left: 0
+      bottom: 2
+      right: 0
+    widgets:
+      left:
+        [
+          "win_button",
+          "notes",
+          "komorebi_workspaces",
+          "komorebi_active_layout",
+          "active_window",
+        ] 
+      center: [
+         "clock",
+         "apps",
+        ]
+      right:
+        [
+          "media",
+          "systray",
+          #"disk",
+          #"battery",
+          #"language",
+          #"ip_info",
+          #"traffic",
+          "cpu",
+          #"memory",
+          #github",
+          "weather",
+          #"wallapers",
+          "volume",
+          "power_menu"
+        ]
+widgets:
+  disk:
+      type: "yasb.disk.DiskWidget"
+      options:
+          label: "{volume_label} {space[used][percent]}"
+          label_alt: "{volume_label} {space[used][gb]} / {space[total][gb]}"
+          volume_label: "C"
+          update_interval: 60 
+          callbacks:
+            on_middle: "do_nothing"
+            on_right: "exec explorer C:\\" 
+  media:
+      type: "yasb.media.MediaWidget"
+      options:
+        label: "{title} - {artist}"
+        label_alt: "{title}"
+        max_field_size:
+          label: 20
+          label_alt: 30
+        show_thumbnail: true
+        controls_only: false
+        controls_left: true
+        hide_empty: true
+        thumbnail_alpha: 80
+        thumbnail_padding: 8
+        thumbnail_corner_radius: 16 
+        icons:
+          prev_track: "\ue892"
+          next_track: "\ue893"
+          play: "\ue768"
+          pause: "\ue769"
+  active_window:
+      type: "yasb.active_window.ActiveWindowWidget"
+      options:
+        label: "{win[title]}"
+        label_alt: ""
+        label_no_window: ""
+        label_icon: true
+        label_icon_size: 14
+        max_length: 56
+        max_length_ellipsis: "..."
+        monitor_exclusive: true
+  battery:
+      type: "yasb.battery.BatteryWidget"
+      options:
+        label: "<span>{icon}</span>{percent}%"
+        label_alt: "{icon} {percent}% | tempo: {time_remaining}"
+        charging_options:
+          icon_format: "{charging_icon}"
+  clock:
+      type: "yasb.clock.ClockWidget"
+      options:
+        label: "{%a %d, %b %H:%M}"
+        label_alt: "{%A %d %B %Y, %H:%M}"
+        locale: 'pt_BR' # Adicionado para garantir PT-BR
+        timezones: [] 
+  cpu:
+      type: "yasb.cpu.CpuWidget"
+      options:
+        label: "<span>\uf4bc</span> {info[percent][total]}%"
+        label_alt: "<span>\uf437</span> {info[histograms][cpu_percent]}"
+        update_interval: 2000
+        histogram_icons:
+          - '\u2581' 
+          - '\u2581' 
+          - '\u2582' 
+          - '\u2583' 
+          - '\u2584' 
+          - '\u2585' 
+          - '\u2586' 
+          - '\u2587' 
+          - '\u2588' 
+        histogram_num_columns: 8
+        callbacks:
+          on_right: "exec cmd /c Taskmgr"
+  memory:
+      type: "yasb.memory.MemoryWidget"
+      options:
+        label: "<span>\uf4bc</span> {virtual_mem_free}"
+        label_alt: "<span>\uf4bc</span> {virtual_mem_percent}%"
+        update_interval: 10000
+        callbacks:
+          on_right: "exec cmd /c Taskmgr"
+  komorebi_workspaces:
+      type: "komorebi.workspaces.WorkspaceWidget"
+      options:
+          label_offline: "Komorebi Offline"
+          label_workspace_btn: "\udb81\udc3d"
+          label_workspace_active_btn: "\udb81\udc3e"
+          label_workspace_populated_btn: "\udb81\udc3e"
+          label_default_name: "{index}"
+          label_zero_index: false
+          hide_empty_workspaces: false
+          hide_if_offline: false
+          container_padding: 
+            top: 0
+            left: 8
+            bottom: 0
+            right: 8
+  komorebi_active_layout:
+      type: "komorebi.active_layout.ActiveLayoutWidget"
+      options:
+        hide_if_offline: true
+        label: "{icon}"
+        layouts: ['bsp', 'columns', 'rows', 'grid', 'vertical_stack', 'horizontal_stack', 'ultrawide_vertical_stack','right_main_vertical_stack']
+        layout_icons:
+          bsp: "BSP"
+          columns: "COLS"
+          rows: "ROWS"
+          grid: "GRID"
+          vertical_stack: "V-STACK"
+          horizontal_stack: "H-STACK"
+          ultrawide_vertical_stack: "W-STACK"
+          right_main_vertical_stack: "RMV-STACK"
+          monocle: "MONOCLE"
+          maximised: "MAX"
+          floating: "FLOATING"
+          paused: "PAUSED"
+        callbacks:
+          on_left: 'next_layout'
+          on_middle: 'toggle_monocle'
+          on_right: 'prev_layout'
+        container_padding: 
+          top: 0
+          left: 8
+          bottom: 0
+          right: 8
+  
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\udb81\udeb6" 
+      label_expanded: "\udb82\ude03"  
+      label_position: "right"
+      icon_size: 14 
+      show_unpinned: false 
+      container_padding: 
+          top: 0
+          left: 4
+          bottom: 0
+          right: 4
+
+  weather:
+      type: "yasb.weather.WeatherWidget"
+      options:
+        label: "<span>{icon}</span> {temp}"
+        # TRADUZIDO
+        label_alt: "{location}: Mín {min_temp}, Máx {max_temp}, Umidade {humidity}"
+        api_key: '3bf4cf9a7c3f40d6b31174128242807' 
+        update_interval: 600 
+        hide_decimal: true
+        # LOCALIZAÇÃO ATUALIZADA
+        location: 'Valinhos, Sao Paulo' 
+        callbacks:
+          on_left: "toggle_label"
+        icons: 
+          sunnyDay: "\ue30d"
+          clearNight: "\ue32b"
+          cloudyDay: "\udb81\udd99"
+          cloudyNight: "\ue311"
+          rainyDay: "\udb81\ude7e"
+          rainyNight: "\udb81\ude7e"
+          snowyIcyDay: "\udb81\udd98"
+          snowyIcyNight: "\udb81\udd98"
+          blizzardDay: "\uebaa"
+          default: "\uebaa"
+  volume:
+      type: "yasb.volume.VolumeWidget"
+      options:
+        label: "<span>{icon}</span> {level}"
+        label_alt: "{volume}"
+        volume_icons:
+          - "\ueee8" 
+          - "\uf026" 
+          - "\uf027" 
+          - "\uf027" 
+          - "\uf028" 
+        callbacks:
+          on_right: "exec cmd.exe /c start ms-settings:sound"
+  power_menu:
+      type: "yasb.power_menu.PowerMenuWidget"
+      options:
+        label: "\uf011"
+        uptime: True
+        blur: False
+        blur_background: True
+        animation_duration: 300 
+        button_row: 3 
+        buttons:
+          # BOTÕES TRADUZIDOS
+          lock: ["\uea75","Bloquear"]
+          signout: ["\udb80\udf43","Sair"]
+          shutdown: ["\uf011","Desligar"]
+          restart: ["\uead2","Reiniciar"]
+          hibernate: ["\uf28e","Hibernar"]
+          cancel: ["\udb81\udf3a","Cancelar"]
+  apps:
+      type: "yasb.applications.ApplicationsWidget"
+      options:
+        label: "{data}"
+        app_list:
+          - {icon: "\uf0a2", launch: "notification_center"}
+          - {icon: "\ueb51", launch: "quick_settings"}
+          - {icon: "\uf422", launch: "search"}
+          - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
+          - {icon: "\udb80\uddda", launch: "start powershell.exe -NoExit -Command winget upgrade"}
+          - { icon: "\uf489", launch: "wt" }
+        container_padding: 
+          top: 0
+          left: 8
+          bottom: 0
+          right: 8
+  github:
+      type: "yasb.github.GithubWidget"
+      options:
+        label: "<span>\ueba1</span>"
+        label_alt: "Notificações {data}" 
+        token: ghp_xxxxxxxxxxx 
+        max_notification: 20 
+        only_unread: false 
+        max_field_size: 54 
+        update_interval: 300 
+  wallapers:
+      type: "yasb.wallpapers.WallpapersWidget"
+      options:
+        label: "<span>\udb83\ude09</span>"
+        image_path: "C:\\Users\\xxx\\Images" 
+        change_automatically: false 
+        update_interval: 60 
+  nvidia_temp:
+      type: "yasb.custom.CustomWidget"
+      options:
+        label: "{data}<span>\udb81\udd04</span>"
+        label_alt: "{data}"
+        class_name: "system-widget"
+        exec_options:
+          run_cmd: "powershell nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader"
+          run_interval: 10000 
+          return_format: "string"
+  win_button:
+      type: "yasb.custom.CustomWidget"
+      options:
+        label: "\ue62a"
+        label_alt: "\ue62a"
+        class_name: "system-widget"
+        callbacks:
+          on_left: "exec start_menu"
+
+  notes:
+    type: "yasb.notes.NotesWidget"
+    options:
+      label: "<span>\udb82\udd0c</span> {count}"
+      label_alt: "{count} notes"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 2
+        right: 0
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        max_title_size: 750
+        show_date_time: true
+      icons:
+        note: "\udb82\udd0c"
+        delete: "\ue20d"
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]

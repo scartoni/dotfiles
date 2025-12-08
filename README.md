@@ -25,13 +25,8 @@ Configuration files to transform the Windows 11 experience into a Tiling Window 
 | **Status Bar** | [YASB](https://github.com/amnweb/yasb) | Custom top bar with widgets and CSS styling. |
 | **Taskbar** | [Windhawk](https://windhawk.net/) | Mods to customize the native taskbar and system tray. |
 
-## 📂 File Structure
+## 🚀 How to use
 
-```text
-dotfiles/
-├── assets/           # Screenshots (Clean & Tiling)
-├── configs/
-│   ├── komorebi/     # Window rules and application config
-│   ├── yasb/         # Bar configuration and styles.css
-│   └── windhawk/     # Taskbar mods (JSON code)
-└── README.md
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/scartoni/dotfiles.git](https://github.com/scartoni/dotfiles.git)

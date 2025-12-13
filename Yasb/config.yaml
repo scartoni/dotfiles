@@ -37,6 +37,7 @@ bars:
         [
           "win_button",
           "notes",
+          "bin",
           "komorebi_workspaces",
           "komorebi_active_layout",
           "active_window",
@@ -264,9 +265,9 @@ widgets:
       options:
         label: "{data}"
         app_list:
-          - {icon: "\uf0a2", launch: "notification_center"}
+          #- {icon: "\uf0a2", launch: "notification_center"}
           - {icon: "\ueb51", launch: "quick_settings"}
-          - {icon: "\uf422", launch: "search"}
+          #- {icon: "\uf422", launch: "search"}
           - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
           - {icon: "\udb80\uddda", launch: "start powershell.exe -NoExit -Command winget upgrade"}
           - { icon: "\uf489", launch: "wt" }
@@ -344,3 +345,20 @@ widgets:
         color: "black"
         radius: 3
         offset: [ 1, 1 ]
+  bin:
+      type: "yasb.recycle_bin.RecycleBinWidget"
+      options:
+        label: "<span>{icon}</span> Itens {items_count}"
+        label_alt: "Total: {items_count}"
+        icons:
+          bin_empty: "\udb82\ude7a"
+          bin_filled: "\udb82\ude79"
+        callbacks:
+          on_left: "empty_bin"
+          on_right: "toggle_label"
+          on_middle: "open_bin"
+        label_shadow:
+          enabled: true
+          color: "black"
+          radius: 0
+          offset: [ 1, 1 ]

@@ -5,6 +5,8 @@
   <br /><br />
   <img src="assets/desktop_komorebi.png" alt="Komorebi Tiling" width="100%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
   <br /><br />
+  <img src="menu.png" alt="Komorebi Tiling" width="100%" style="border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
+  <br /><br />
 
   <img src="[https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows&logoColor=white](https://img.shields.io/badge/Windows-11-0078D6?style=for-the-badge&logo=windows&logoColor=white)" />
   <img src="[https://img.shields.io/badge/WM-Komorebi-orange?style=for-the-badge](https://img.shields.io/badge/WM-Komorebi-orange?style=for-the-badge)" />
